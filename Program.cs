@@ -1,8 +1,12 @@
-﻿// Программа, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+﻿// Программа, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
-Console.Write($"Введите пятизначное число \n");
-//int a = int.Parse(Console.ReadLine()!);
-String number = Console.ReadLine()!;
-if (number[4] == number[0] & number[3] == number[1]) 
-{Console.Write($"число {number} является палиндромом \n");}
-else {Console.Write($"число {number} не является палиндромом \n");}
+Console.Write($"Введите число N ");
+int N = int.Parse(Console.ReadLine()!);
+double [] array = new double[N];
+int index = 0;
+while (index<N)
+{
+array[index] = Math.Pow(index+1,3);
+Console.Write($" {array[index]} ");
+index++;
+}
