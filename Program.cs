@@ -10,11 +10,8 @@ while (n1<3)
 tochkaA[n1] = int.Parse(Console.ReadLine());
 Console.Write($"Введите координату точки B x{n1+1}=");
 tochkaB[n1] = int.Parse(Console.ReadLine());
-d[n1] = Math.Pow((tochkaA[n1]-tochkaB[n1]),2);
-dist = dist + d[n1];
+d[n1] = Math.Pow((tochkaA[n1]-tochkaB[n1]),2); // возводит в квадрат разность между координатами
+dist = dist + d[n1]; // суммирует квадраты разности трех координат
 n1++;}
-//d[n1] = Math.Pow((tochkaA[n1]-tochkaB[n1]),2);
-//d2 = Math.Pow((tochkaA[1]-tochkaB[1]),2);
-//d3 = Math.Pow((tochkaA[2]-tochkaB[2]),2);
-dist = Math.Round(Math.Sqrt(dist),2);
+dist = Math.Round(Math.Sqrt(dist),2); // округляет до 2-х знаков после запятой квадратный корень из суммы разности трех координат
 Console.Write($"Расстояние между точкой А и точкой В равно {dist}");
